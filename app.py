@@ -41,7 +41,7 @@ class DeepFakeDetector(nn.Module):
         return output
 
 # Load model
-MODEL_PATH = r"C:\Users\KIIT\Documents\Minor\best_deepfake_detector2.pth"  # Update with correct path
+MODEL_PATH = "best_deepfake_detector2.pth"# Update with correct path
 model = DeepFakeDetector().to(DEVICE)
 model.load_state_dict(torch.load(MODEL_PATH, map_location=DEVICE))
 model.eval()
